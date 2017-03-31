@@ -1,0 +1,18 @@
+from random import random
+
+def meet_up():
+    if abs(random() - random()) < .25:
+        return True
+    return False
+
+def meet_over_time(goes):
+    count = 0
+    for i in range(goes):
+        if meet_up():
+            count += 1
+    goes = float(goes)
+    print count / goes
+
+meet_over_time(1000000)
+meet_over_time(1000000)
+meet_over_time(1000000)
